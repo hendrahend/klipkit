@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "klipkit"
+version = "0.1.0"
+description = "Local-first clip finder for freelance clippers: Whisper + a local open-weight model, no cloud."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Hendra Hendriana" }]
+keywords = ["whisper", "clips", "short-form", "ollama", "gemma", "ffmpeg", "local-first"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Multimedia :: Video",
+]
+dependencies = [
+    "faster-whisper>=1.1",
+    "yt-dlp>=2025.1.1",
+    "typer>=0.12",
+    "rich>=13.7",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+klipkit = "klipkit.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["klipkit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+out/
+*.mp4
+*.wav
+*.m4a
+transcript.json
+clips.json
+.pytest_cache/
+models/
+.DS_Store

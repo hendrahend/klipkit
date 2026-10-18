@@ -39,7 +39,7 @@ touching the rest of the pipeline.
 ## Install
 
 ```bash
-git clone https://github.com/<you>/klipkit.git && cd klipkit
+git clone https://github.com/hendrahend/klipkit.git && cd klipkit
 python -m venv .venv && source .venv/bin/activate
 pip install -e .
 ```

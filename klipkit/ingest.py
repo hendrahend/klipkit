@@ -33,6 +33,7 @@ def _download_url(url: str, workdir: Path) -> tuple[Path, str, str]:
         "noplaylist": True,
         "retries": 5,
         "fragment_retries": 5,
+        "js_runtimes": {"node": {}},
     }
     with yt_dlp.YoutubeDL(opts) as ydl:
         info = ydl.extract_info(url, download=True)
